@@ -10,7 +10,7 @@ else{
     console.log('cmng');
 
     // var data = []
-    var url ="54.89.185.189:3000/mytrans"
+    var url ="http://ec2-54-89-185-189.compute-1.amazonaws.com:3000/mytrans"
     fetch(url,{
         method:'get',
         headers:{
@@ -52,7 +52,7 @@ var category = document.getElementById('tit2').value
 var amount = document.getElementById('tit3').value
 var mode = document.getElementById('tit4').value
 
-var url3 ="54.89.185.189:3000/addtrans"
+var url3 ="http://ec2-54-89-185-189.compute-1.amazonaws.com:3000/addtrans"
 // console.log(title,category,am)
 // amount = toString(amount);
 fetch(url3 , {
@@ -68,7 +68,7 @@ fetch(url3 , {
     .then(result=>{
         if (result.message){
           console.log("succesful")
-          fetch("54.89.185.189:3000/addnots",{
+          fetch("http://ec2-54-89-185-189.compute-1.amazonaws.com:3000/addnots",{
             method:'post',
               headers:{
                 "Authorization":"Bearer "+ localStorage.getItem("jwt"),

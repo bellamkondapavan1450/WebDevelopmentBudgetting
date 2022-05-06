@@ -48,7 +48,7 @@ function postData  (name,email,ph,password,country){
     // var url=(data.data.secure_url);
     // console.log(url);}
     // )
-   const url = "54.89.185.189:3000/signup"
+   const url = "http://ec2-54-89-185-189.compute-1.amazonaws.com:3000/signup"
 
     fetch(url,{
         method:"POST",

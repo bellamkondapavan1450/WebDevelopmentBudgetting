@@ -4,7 +4,7 @@ function signin(){
     // var email ='p@gmail.com'
     // var password =  '123234'
 
-    const url = "54.89.185.189:3000/signin"
+    const url = "http://ec2-54-89-185-189.compute-1.amazonaws.com:3000/signin"
   
 
         fetch(url,{
@@ -26,7 +26,7 @@ function signin(){
                 localStorage.setItem("jwt",data.token);
                 localStorage.setItem("user",JSON.stringify(data.user))
                window.location.href='../index.html'
-               fetch("54.89.185.189:3000/addnots",{
+               fetch("http://ec2-54-89-185-189.compute-1.amazonaws.com:3000/addnots",{
                 method:'post',
                   headers:{
                     "Authorization":"Bearer "+ localStorage.getItem("jwt"),
