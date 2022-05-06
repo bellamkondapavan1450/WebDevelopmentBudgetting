@@ -3,12 +3,12 @@
 // tata.text('Hello World', 'CSSScript.Com', {
 //     position: 'tr'
 //   })
-var url ="http://localhost:3000/userdetails"
+var url ="http://54.89185.189:3000/userdetails"
 var name1="";
 var email = "";
 var profile="";
 var user_id ="";
-fetch("http://localhost:3000/userdetails",{
+fetch("http://54.89185.189:3000/userdetails",{
     method:'get',
     headers:{
         "Authorization":"Bearer "+ localStorage.getItem("jwt")
@@ -29,7 +29,7 @@ fetch("http://localhost:3000/userdetails",{
 
 
   // var data = []
-  var url ="http://localhost:3000/mytrans"
+  var url ="http://54.89185.189:3000/mytrans"
   fetch(url,{
       method:'get',
       headers:{

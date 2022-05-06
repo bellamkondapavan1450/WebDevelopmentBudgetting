@@ -10,7 +10,7 @@ if(!localStorage.getItem('user')|| !localStorage.getItem('jwt')){
 else{// window.onload = function(){
     // console.log('cmng');
     // var data = []
-    var url ="http://localhost:3000/mynots"
+    var url ="http://54.89185.189:3000/mynots"
     fetch(url,{
         method:'get',
         headers:{
@@ -39,7 +39,7 @@ else{// window.onload = function(){
 
 
 function clearnots(){
-    var url2 ="http://localhost:3000/removenots"
+    var url2 ="http://54.89185.189:3000/removenots"
     fetch(url2,{
         method:'post',
          headers:{
