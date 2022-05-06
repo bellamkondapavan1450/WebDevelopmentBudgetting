@@ -1,0 +1,97 @@
+.screen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+    width:100vw;
+}
+body{
+    margin: 0;
+    background-color: #5C7FF7;
+    font-family: 'Kiwi Maru', serif;
+}
+.form{
+    background-color: white;
+    width:50%;
+    height:max-content;
+    border-radius: 10px;
+    font-family: 'Kiwi Maru', serif;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    /* align-items: center; */
+    /* align-items:initial; */
+    flex-direction: column;
+
+
+
+
+}
+.name{
+    margin-left: 20%;
+    margin-top: 5%;
+}
+.input1{
+    width:50%;
+    height:30px;
+    border-radius: 5px;
+    border: 1px solid black ;
+    margin-left: 10px;
+}
+.email{
+    margin-left: 20%;
+    margin-top: 5%;
+}
+b{
+    margin: 0;
+}
+.emai{
+    margin-left: 10px;
+    border:1px solid black;
+    padding: 5px;
+    border-radius: 4px;
+    
+}
+.tit{
+    font-size: xx-large;
+    margin-left: 30%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 10%;
+}
+.income{
+    margin-left: 20%;
+    margin-top: 5%;
+}
+.payment{
+    margin-left: 20%;
+    margin-top: 5%;
+    width: max-content;
+}
+select{
+all:unset
+}
+.butt{
+    width:20%;
+    margin-left: 40%;
+    height: 5%;
+    background-color: aqua;
+    margin-bottom: 10%;
+    border-radius: 3px;
+    margon-top:15px;
+}
+.button{
+    /* width:100px; */
+    /* background-color: blue; */
+    max-width: fit-content;
+}
+button{
+    background-color: aquamarine;
+    width:20%;
+    margin-left: 40%;
+    height: 10%;
+    margin-bottom: 10%;
+    border-radius: 5px;
+    margin-top: 5%;
+}
+a{
+    margin:0;
+}

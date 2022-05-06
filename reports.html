@@ -1,0 +1,166 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgeteer</title>
+    <link  rel="stylesheet" href="Style.css" >
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap" rel="stylesheet">
+<script src='./scripts/login.js'></script>
+<script src='./scripts/remaining.js'></script>
+<link rel="icon" href="https://cdn.iconscout.com/icon/free/png-256/budget-1850786-1571027.png">
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    
+</head>
+<body >
+  <div class='homescreen'>
+    <div class="navigation">
+      <div class="title">
+        <div>
+        <ion-icon name="analytics-outline" class="size"></ion-icon> 
+
+        </div>
+        <div class="text">
+          MY FINANCES
+        </div>
+      
+
+      </div>
+      <div class="title2">
+        <ion-icon name="albums-outline"></ion-icon>
+        <div class="text">
+            <a href='./index.html'>Overview</a> 
+
+        </div>
+       
+
+      </div>
+      <div class="title2">
+        <ion-icon name="card-outline"></ion-icon>
+        <div class="text">
+         <a href="./expenses.html"> Expenses</a>
+        </div>
+       
+      </div>
+      <div class="title2">
+        <ion-icon name="clipboard-outline"></ion-icon>
+        <div class="text">
+         <a href='./reports.html'> Reports</a>
+        </div>
+  </div>
+
+        <div class="title2">
+        <ion-icon name="bar-chart-outline"></ion-icon>
+
+          <div class="text">
+          <a href="./transactions.html"> Transactions</a> 
+          </div>
+      </div>
+      <div class="title2">
+        <ion-icon name="notifications-sharp"></ion-icon>
+          <div class="text">
+           <a href="./notifications.html"> Notifications</a>
+          </div>
+      </div>
+
+ </div>
+
+
+    <div class="stats2">
+      <div class="statstitle">
+      <span>
+         Reports
+      </span>
+      </div>
+     <div class="repot">
+     
+
+       <div class="c4" id='chart'> </div>
+
+ 
+   </div>
+
+</div>
+</div>
+
+
+</body>
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+<!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
+<script>
+    
+  var options = {
+    series: [{
+    name: 'Income',
+    type: 'column',
+    data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30]
+  }, {
+    name: 'Expenses',
+    type: 'area',
+    data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43]
+  }, {
+    name: 'Saving',
+    type: 'line',
+    data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39]
+  }],
+    chart: {
+    height: 350,
+    type: 'line',
+    stacked: false,
+  },
+  stroke: {
+    width: [0, 2, 5],
+    curve: 'smooth'
+  },
+  plotOptions: {
+    bar: {
+      columnWidth: '50%'
+    }
+  },
+  
+  fill: {
+    opacity: [0.85, 0.25, 1],
+    gradient: {
+      inverseColors: false,
+      shade: 'light',
+      type: "vertical",
+      opacityFrom: 0.85,
+      opacityTo: 0.55,
+      stops: [0, 100, 100, 100]
+    }
+  },
+  labels: ['Jan\'20', 'Feb\'20', 'Mar\'20', 'Apr\'20', 'May\'20', 'Jun\'20', 'Jul\'20', 'Aug\'20', 'Sep\'20', 'Oct\'20', 'Nov\'20', 'Dec\'20',],
+  markers: {
+    size: 0
+  },
+  xaxis: {
+    
+  },
+  yaxis: {
+    title: {
+      text: 'Amount(thousands)',
+    },
+    min: 0
+  },
+  tooltip: {
+    shared: true,
+    intersect: false,
+    y: {
+      formatter: function (y) {
+        if (typeof y !== "undefined") {
+          return y.toFixed(0) + "K(INR)";
+        }
+        return y;
+  
+      }
+    }
+  }
+  };
+
+  var chart = new ApexCharts(document.querySelector("#chart"), options);
+  chart.render();
+</script>
+
+</html>

@@ -1,0 +1,141 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions</title>
+    <link  rel="stylesheet" href="Style.css" >
+    <link  rel="stylesheet" href="style2.css" >
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap" rel="stylesheet">
+<!-- <script src='./scripts/login.js'></script> -->
+<!-- <script src='./scripts/remaining.js'></script> -->
+<link rel="icon" href="https://cdn.iconscout.com/icon/free/png-256/budget-1850786-1571027.png">
+<script src='./scripts/transactions.js'></script>
+
+</head>
+<body>
+    <div class='homescreen'>
+        <div class="navigation">
+          <div class="title">
+            <div>
+            <ion-icon name="analytics-outline" class="size"></ion-icon> 
+    
+            </div>
+            <div class="text">
+              MY FINANCES
+            </div>
+          
+    
+          </div>
+          <div class="title2">
+            <ion-icon name="albums-outline"></ion-icon>
+            <div class="text">
+                <a href='./index.html'>Overview</a> 
+    
+            </div>
+           
+    
+          </div>
+          <div class="title2">
+            <ion-icon name="card-outline"></ion-icon>
+            <div class="text">
+             <a href="./expenses.html"> Expenses</a>
+            </div>
+           
+          </div>
+          <div class="title2">
+            <ion-icon name="clipboard-outline"></ion-icon>
+            <div class="text">
+             <a href='./reports.html'> Reports</a>
+            </div>
+      </div>
+    
+            <div class="title2">
+            <ion-icon name="bar-chart-outline"></ion-icon>
+    
+              <div class="text">
+              <a href="./transactions.html"> Transactions</a> 
+              </div>
+          </div>
+          <div class="title2">
+            <ion-icon name="notifications-sharp"></ion-icon>
+              <div class="text">
+               <a href="./notifications.html"> Notifications</a>
+              </div>
+          </div>
+    
+     </div>
+     
+     <div class="transactions">
+         <div  class="addnotification">
+            <span class="heading1">
+                Add transaction
+            </span>
+         </div>
+
+         <div class="handle">
+             <div class="displaytrans">
+               <div class="scroll" id = 'sclist'>
+
+                 
+               </div>
+
+               </div>
+             <div class="addtrans">
+                 <div class="info">
+                   <span>
+                    <b>Transaction information</b>
+                </span>
+                 </div>
+                <div class="add">
+                    <div class="stit">
+                      <span>
+                        <b>Title:</b>
+                    </span>
+                    <input class="ttitle" type='text' id = "tit1">
+
+                    </div>
+
+                    <div class="stit">
+                      <span>
+                        <b>Category:</b>
+                    </span>
+                    <input class="ttitle" type='text' id = "tit2">
+
+                    </div>
+                    <div class="stit">
+                      <span>
+                        <b>Amount:</b>
+                    </span>
+                    <input class="ttitle" type='number' id = "tit3" placeholder="INR">
+
+                    </div>
+                    
+                    <div class="stit">
+                      <span>
+                        <b>Type:</b>
+                    </span>
+                    <input class="ttitle" type='text' placeholder = 'Debit/Credit' id = "tit4">
+
+                    </div>
+                    <div > 
+                         <input  class="b" type="button"  value="Add" onclick="add()">
+
+                    </div>
+                    
+                   
+                                           
+                                        
+                </div>
+        </div>
+
+         </div>
+
+     </div>
+     </div>
+
+</body>
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</html>

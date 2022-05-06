@@ -1,0 +1,267 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgeteer</title>
+    <link  rel="stylesheet" href="Style.css" >
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap" rel="stylesheet">
+<script src='./scripts/login.js'></script>
+<script src='./scripts/remaining.js'></script>
+<link rel="icon" href="https://cdn.iconscout.com/icon/free/png-256/budget-1850786-1571027.png">
+<link rel='stylesheet' href="./index.css">
+<script src='./scripts/home.js'></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    
+</head>
+<body >
+  <div class='homescreen'>
+    <div class="navigation">
+      <div class="title">
+        <div>
+        <ion-icon name="analytics-outline" class="size"></ion-icon> 
+
+        </div>
+        <div class="text">
+          MY FINANCES
+        </div>
+      
+
+      </div>
+      <div class="title2">
+        <ion-icon name="albums-outline"></ion-icon>
+        <div class="text">
+         <a href="./index.html"> Overview </a>
+        </div>
+       
+
+      </div>
+      <div class="title2">
+        <ion-icon name="card-outline"></ion-icon>
+        <div class="text">
+         <a href="./expenses.html"> Expenses</a>
+        </div>
+       
+      </div>
+      <div class="title2">
+        <ion-icon name="clipboard-outline"></ion-icon>
+        <div class="text">
+         <a href='./reports.html'> Reports</a>
+        </div>
+  </div>
+
+        <div class="title2">
+        <ion-icon name="bar-chart-outline"></ion-icon>
+
+          <div class="text">
+          <a href="./transactions.html"> Transactions</a> 
+          </div>
+      </div>
+      <div class="title2">
+        <ion-icon name="notifications-sharp"></ion-icon>
+          <div class="text">
+           <a href="./notifications.html"> Notifications</a>
+          </div>
+      </div>
+
+
+     
+
+
+
+
+    </div>
+
+
+    <div class="stats">
+      <div class="statstitle">
+      <span>
+      Overview
+      </span>
+      </div>
+      <div class="barcha" style="max-width: 50vw; max-height:80vh; margin-top:15vh">
+  
+
+    <!-- <div id="chart_div" style="width: 50vw; height: 100%;" class="image"></div> -->
+    <div id ='chart'>
+
+    </div>
+                 <!-- <img src='./images/stats.png' class="image" > -->
+      </div>
+       
+        
+  
+    <!-- <div id="calendar_basic" style="width: 50vw; height: 100px; margin-top:10%"></div> -->
+ 
+
+            
+        
+       
+      </div>
+
+    <div class="profile">
+      <div class="photo"  id = 'p1'>
+        <!-- <input type="image"> -->
+      </div>
+      <div class="name" id='n'>
+     <b><span id="n1">      </span></b>  
+       <br>
+      </div>
+      <div class="name2">
+       <a href="./auth/signin2.html" id='border' onclick="logout()" ><b>Log out</b> </a>
+      </div>
+     <div class="cards">
+       <span>
+       <b>Recent transactions</b> 
+       </span>
+       <br>
+       <div class='scroll' id = 'sc1'>
+        <!-- <div class='t1'>
+          <span class='t2'>
+            <b> grhybghj4bg</b>
+          </span>
+          <span class="ta"> 
+          <b>1000</b> 
+          </span>
+
+        </div> -->
+
+        
+       
+       </div>
+     </div>
+    </div>
+</div>
+
+
+
+
+
+</body>
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Year', 'savings', 'Extra Expenses'],
+      ['2013',  1000,      400],
+      ['2014',  1170,      460],
+      ['2015',  660,       1120],
+      ['2016',  1030,      540]
+    ]);
+
+    var options = {
+      title: 'Company Performance',
+      hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+      vAxis: {minValue: 0}
+    };
+
+    var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+  }
+</script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load("current", {packages:["corechart"]});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Category', 'money percent'],
+      ['FOOD',     11],
+      ['TRANSPORT',      2],
+      ['SUBSCRIPTIONS',  2],
+      ['RENT', 2],
+      ['PERSONAL STUFF',    7],
+     
+    ]);
+
+    var options = {
+      title: 'My Daily Activities',
+      pieHole: 0.4,
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+    chart.draw(data, options);
+   
+    chart.draw(data,chart2)
+  }
+</script>
+
+
+<script>
+  var options = {
+    series: [{
+    name: 'Food',
+    data: [44, 55, 41, 37, 22, 43, 21]
+  }, {
+    name: 'Shopping',
+    data: [53, 32, 33, 52, 13, 43, 32]
+  }, {
+    name: 'Travel',
+    data: [12, 17, 11, 9, 15, 11, 20]
+  }, {
+    name: 'Bills',
+    data: [9, 7, 5, 8, 6, 9, 4]
+  }, {
+    name: 'Others',
+    data: [25, 12, 19, 32, 25, 24, 10]
+  }],
+    chart: {
+    type: 'bar',
+    height: 350,
+    stacked: true,
+    stackType: '100%'
+  },
+  plotOptions: {
+    bar: {
+      horizontal: true,
+    },
+  },
+  stroke: {
+    width: 1,
+    colors: ['#fff']
+  },
+  title: {
+    text: 'year wise major expenses '
+  },
+  xaxis: {
+    categories: [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+  },
+  tooltip: {
+    y: {
+      formatter: function (val) {
+        return val + "K"
+      }
+    }
+  },
+  fill: {
+    opacity: 1
+  
+  },
+  legend: {
+    position: 'top',
+    horizontalAlign: 'left',
+    offsetX: 40
+  }
+  };
+
+  var chart = new ApexCharts(document.querySelector("#chart"), options);
+  chart.render();
+</script>
+
+<script src="dist/tata.js"></script>
+<script>
+  tata.text('Hello World', 'CSSScript.Com', {
+        position: 'tr'
+     })
+</script>
+
+<body>
+</div>
+</html>
